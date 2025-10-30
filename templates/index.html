@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Controle Financeiro Pessoal</h1>
+        <h2>Saldo Atual: <span class="saldo">R$ {{ "%.2f"|format(saldo) }}</span></h2>
+
+        <form action="/adicionar" method="post" class="formulario">
+            <input type="text" name="descricao" placeholder="Descrição" required>
+            <input type="number" step="0.01" name="valor" placeholder="Valor" required>
+            <select name="tipo" required>
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <h3>Histórico de Transações</h3>
+        <table>
+            <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+                <th>Data</th>
+                <th>Ação</th>
+            </tr>
+            {% for t in transacoes %}
+            <tr>
+                <td>{{ t.descricao }}</td>
+                <td>R$ {{ "%.2f"|format(t.valor) }}</td>
+                <td class="{{ t.tipo }}">{{ t.tipo.capitalize() }}</td>
+                <td>{{ t.data.strftime("%d/%m/%Y %H:%M") }}</td>
+                <td>
+                    <form action="/excluir/{{ t.id }}" method="post" style="display:inline;">
+                        <button type="submit" class="excluir">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f3f6f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2d6a4f;
+}
+
+.saldo {
+  text-align: center;
+  margin: 20px 0;
+}
+.saldo span {
+  color: #2d6a4f;
+  font-weight: bold;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.formulario input, .formulario select, .formulario button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.formulario button {
+  background: #2d6a4f;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+.formulario button:hover {
+  background: #1b4332;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table th, table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.receita { color: #2d6a4f; font-weight: bold; }
+.despesa { color: #d00000; font-weight: bold; }
+
+button.excluir {
+  background: #d00000;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button.excluir:hover {
+  background: #9b0000;
+}
