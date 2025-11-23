@@ -1,11 +1,11 @@
-##Sobre o Projeto
+Sobre o Projeto
 
 O Controle Financeiro é uma aplicação simples desenvolvida para ajudar o usuário a gerenciar entradas e saídas de dinheiro de forma prática e organizada.
 O sistema permite registrar transações, classificar como entrada ou saída, salvar automaticamente no navegador (localStorage) e visualizar o saldo atualizado em tempo real.
 
 Este projeto pode ser utilizado como base para estudos, portfólio ou expansão para um sistema financeiro completo.
 
-##🚀 Funcionalidades
+ Funcionalidades
 
 Adicionar transações com:
 
@@ -25,22 +25,22 @@ Remoção de transações
 
 Interface simples e objetiva
 
-##🧱 Estrutura de Pastas do Projeto
+ Estrutura de Pastas do Projeto
 controle_financeiro/
 │── index.html
 │── style.css
 │── script.js
 └── README.md
 
-##📄 index.html
+ index.html
 
 Contém a estrutura básica da interface com o formulário e a lista de transações.
 
-##🎨 style.css
+ style.css
 
 Responsável pelo visual do sistema: cores, layout e responsividade simples.
 
-##⚙️ script.js
+ script.js
 
 Toda a lógica da aplicação está aqui:
 
@@ -50,7 +50,7 @@ cálculos
 
 interação com localStorage
 
-##💻 Como Executar o Projeto
+ Como Executar o Projeto
 
 Baixe ou clone este repositório:
 
@@ -66,7 +66,7 @@ Execute com uma extensão live server (VSCode, por exemplo)
 
 Não há necessidade de instalar dependências — o projeto é totalmente em HTML + CSS + JavaScript puro.
 
-##🧠 Como Funciona o Sistema
+ Como Funciona o Sistema
 ➤ Salvando Transações
 
 Cada transação criada é registrada como um objeto:
@@ -87,7 +87,7 @@ O sistema soma os valores das entradas e subtrai as saídas:
 
 saldo = soma(entradas) – soma(saídas)
 
-##🎯 Melhorias Futuras (Sugestões)
+ Melhorias Futuras (Sugestões)
 
 Se quiser evoluir o projeto, aqui vão ideias:
 
@@ -107,7 +107,7 @@ API backend com banco de dados
 
 Posso adicionar qualquer uma dessas melhorias para você!
 
-##🛠️ Tecnologias Utilizadas
+ Tecnologias Utilizadas
 
 HTML5
 
@@ -117,6 +117,6 @@ JavaScript (ES6+)
 
 LocalStorage
 
-##👩‍💻 Autor
+ Autor
 
 Desenvolvido por Allana Ismério
