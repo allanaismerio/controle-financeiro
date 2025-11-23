@@ -1,4 +1,4 @@
-##📌 Sobre o Projeto
+##Sobre o Projeto
 
 O Controle Financeiro é uma aplicação simples desenvolvida para ajudar o usuário a gerenciar entradas e saídas de dinheiro de forma prática e organizada.
 O sistema permite registrar transações, classificar como entrada ou saída, salvar automaticamente no navegador (localStorage) e visualizar o saldo atualizado em tempo real.
