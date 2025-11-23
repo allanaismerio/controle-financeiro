@@ -21,10 +21,6 @@ h1 {
 }
 
 .saldo {
-  text-align: center;
-  margin: 20px 0;
-}
-.saldo span {
   color: #2d6a4f;
   font-weight: bold;
 }
@@ -58,6 +54,7 @@ table th, table td {
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
+
 .receita { color: #2d6a4f; font-weight: bold; }
 .despesa { color: #d00000; font-weight: bold; }
 
