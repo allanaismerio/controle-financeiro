@@ -1,75 +1,122 @@
-# Controle Financeiro Pessoal com FastAPI
+##📌 Sobre o Projeto
 
-Este é um projeto de aplicação web para gerenciamento de finanças pessoais. Ele permite ao usuário adicionar receitas e despesas, que são listadas em uma tabela, e exibe o saldo total atualizado em tempo real.
+O Controle Financeiro é uma aplicação simples desenvolvida para ajudar o usuário a gerenciar entradas e saídas de dinheiro de forma prática e organizada.
+O sistema permite registrar transações, classificar como entrada ou saída, salvar automaticamente no navegador (localStorage) e visualizar o saldo atualizado em tempo real.
 
-A aplicação é construída inteiramente em **Python** usando o framework **FastAPI** para o back-end, **SQLAlchemy** para o banco de dados e **Jinja2** para renderizar o front-end em HTML/CSS.
+Este projeto pode ser utilizado como base para estudos, portfólio ou expansão para um sistema financeiro completo.
 
-## Funcionalidades
+##🚀 Funcionalidades
 
-* **Adicionar Transações:** Formulário para adicionar novas entradas, especificando se é 'Receita' ou 'Despesa'.
-* **Listar Transações:** Todas as transações são exibidas em uma tabela.
-* **Cálculo de Saldo:** O saldo total é calculado (Receitas - Despesas) e exibido no topo da página.
-* **Excluir Transações:** É possível remover transações individualmente.
-* **Persistência de Dados:** Os dados são salvos em um banco de dados SQLite.
+Adicionar transações com:
 
-## Tecnologias Utilizadas
+Descrição
 
-* **Back-end:**
-    * **Python 3**
-    * **FastAPI:** Framework web para a criação da API.
-    * **Uvicorn:** Servidor ASGI para executar a aplicação.
-* **Banco de Dados:**
-    * **SQLAlchemy (ORM):** Para interagir com o banco de dados usando Python.
-    * **SQLite:** Banco de dados relacional baseado em arquivo.
-* **Front-end:**
-    * **Jinja2:** Motor de templates para injetar dados do Python no HTML.
-    * **HTML5:** Para a estrutura da página.
-    * **CSS3:** Para a estilização.
+Valor
 
-## Estrutura do Projeto
-/ ├── static/ 
-│ └── style.css # Folha de estilos 
-├── templates/ 
-│ └── index.html # Template HTML com Jinja2 
-├── .gitignore # Ignora arquivos (como o .db) 
-├── database.py # Configuração da conexão com o banco (SQLAlchemy) 
-├── main.py # Lógica principal da aplicação (rotas FastAPI) 
-├── models.py # Definição das tabelas do banco (Modelo SQLAlchemy) 
-├── procfile.txt # (Opcional) Para deploy no Heroku 
-└── requirements.txt # Lista de dependências Python
+Tipo (Entrada / Saída)
+
+Exibição automática da lista de transações
+
+Cálculo do saldo total
+
+Armazenamento local usando localStorage
+
+Remoção de transações
+
+Interface simples e objetiva
+
+##🧱 Estrutura de Pastas do Projeto
+controle_financeiro/
+│── index.html
+│── style.css
+│── script.js
+└── README.md
+
+##📄 index.html
+
+Contém a estrutura básica da interface com o formulário e a lista de transações.
+
+##🎨 style.css
+
+Responsável pelo visual do sistema: cores, layout e responsividade simples.
+
+##⚙️ script.js
+
+Toda a lógica da aplicação está aqui:
+
+gerenciamento de transações
+
+cálculos
+
+interação com localStorage
+
+##💻 Como Executar o Projeto
+
+Baixe ou clone este repositório:
+
+git clone https://github.com/seu-usuario/controle_financeiro.git
 
 
-## ⚙️ Como Executar Localmente
+Abra o arquivo index.html no navegador:
 
-Você precisará ter o Python 3 instalado.
+Dê dois cliques
+ou
 
-1.  **Clone o repositório:**
-    ```sh
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-    cd seu-repositorio
-    ```
+Execute com uma extensão live server (VSCode, por exemplo)
 
-2.  **Crie e ative um ambiente virtual:**
-    ```sh
-    # Windows
-    python -m venv venv
-    .\venv\Scripts\activate
+Não há necessidade de instalar dependências — o projeto é totalmente em HTML + CSS + JavaScript puro.
 
-    # macOS / Linux
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
+##🧠 Como Funciona o Sistema
+➤ Salvando Transações
 
-3.  **Instale as dependências:**
-    ```sh
-    pip install -r requirements.txt
-    ```
+Cada transação criada é registrada como um objeto:
 
-4.  **Execute o servidor:**
-    ```sh
-    uvicorn main:app --reload
-    ```
-    * `--reload` faz o servidor reiniciar automaticamente a cada mudança no código.
+{
+  id: 1,
+  descricao: "Salário",
+  valor: 2000,
+  tipo: "entrada"
+}
 
-5.  **Acesse no navegador:**
-    Abra seu navegador e visite `http://127.0.0.1:8000`
+
+Todas ficam armazenadas no localStorage, garantindo que persistam mesmo após fechar o navegador.
+
+➤ Calculando o Saldo
+
+O sistema soma os valores das entradas e subtrai as saídas:
+
+saldo = soma(entradas) – soma(saídas)
+
+##🎯 Melhorias Futuras (Sugestões)
+
+Se quiser evoluir o projeto, aqui vão ideias:
+
+Filtrar transações por data
+
+Filtro por tipo (entradas/saídas)
+
+Categorias: alimentação, transporte, lazer etc.
+
+Exportar relatório em PDF ou CSV
+
+Login com autenticação
+
+Dashboard com gráficos (Chart.js)
+
+API backend com banco de dados
+
+Posso adicionar qualquer uma dessas melhorias para você!
+
+##🛠️ Tecnologias Utilizadas
+
+HTML5
+
+CSS3
+
+JavaScript (ES6+)
+
+LocalStorage
+
+##👩‍💻 Autor
+
+Desenvolvido por Allana Ismério
